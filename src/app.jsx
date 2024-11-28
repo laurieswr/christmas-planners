@@ -18,7 +18,6 @@ function App() {
             <Route path="/accueil" element={<Accueil />} />
             <Route path="/cadeaux" element={<Cadeaux />} />
             <Route path="/footer" element={<Footer />} />
-            <Route path="/" element={<Accueil />} />
             <Route path='/menu' element={<Menu />} />
             <Route path="/compte-rebours" element={<CompteRebours />} />
             <Route path="/music" element={<ChristmasMusic />} />
