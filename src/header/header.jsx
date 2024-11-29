@@ -11,6 +11,7 @@ const Header = () => {
       <div className="header">
         <h1 className="title">Christmas Planner🎄</h1>
       </div>
+      <br />
       <div>
           <ChristmasMusic />
       </div>
