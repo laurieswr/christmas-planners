@@ -14,6 +14,7 @@ function App() {
       <Router>
         <div>
           <Header />
+          <ChristmasMusic />
           <Routes>
             <Route path="/accueil" element={<Accueil />} />
             <Route path="/cadeaux" element={<Cadeaux />} />
