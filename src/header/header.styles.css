@@ -45,5 +45,8 @@
 @media (min-width: 700px) {
   .main {
     height: 200px;
+
+    display: flex;
+    justify-content: flex-start;
   }
 }
