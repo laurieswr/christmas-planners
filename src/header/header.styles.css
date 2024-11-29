@@ -45,7 +45,7 @@ main{
   justify-content: space-evenly;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 700px) {
   .main {
     height: 200px;
   }
