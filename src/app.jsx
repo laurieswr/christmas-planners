@@ -12,18 +12,16 @@ import ChristmasMusic from './christmas-music/music';
 function App() {
   return (
     <>
-    
       <div>
         <Header />
         <ChristmasMusic />
-        <Routes>
-        <Route path="/accueil" element={<Accueil />} />
-        {/* autres routes */}
-          <Route path="/cadeaux" element={<Cadeaux />} />
-          <Route path='/menu' element={<MenuNoel />} />
-          <Route path="/compte-rebours" element={<CompteRebours />} />
-          <Route path="/music" element={<ChristmasMusic />} /> 
-        </Routes>
+          <Routes>
+            <Route path="/accueil" element={<Accueil />} />
+            <Route path="/cadeaux" element={<Cadeaux />} />
+            <Route path='/menu' element={<MenuNoel />} />
+            <Route path="/compte-rebours" element={<CompteRebours />} />
+            <Route path="/music" element={<ChristmasMusic />} /> 
+          </Routes>
         <Navbar />
       </div>
       <Footer />
