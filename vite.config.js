@@ -1,15 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'https://laurieswr.github.io/christmas-planners/',
+  base: '/christmas-planners/', // Le chemin relatif pour GitHub Pages
   plugins: [react()],
   build: {
+    outDir: 'dist', // Par défaut, le dossier de sortie est "dist"
     rollupOptions: {
       input: {
-        main: 'index.html',
+        main: './index.html', // Assurez-vous que le chemin est correct
       },
     },
-  }
-})
+  },
+});
