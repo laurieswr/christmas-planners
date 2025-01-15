@@ -2,14 +2,14 @@
   "name": "christmas-planners",
   "homepage": "https://laurieswr.github.io/christmas-planners",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "dev": "vite",                            
+    "build": "vite build",                   
+    "preview": "vite preview",              
+    "predeploy": "npm run build",           
+    "deploy": "gh-pages -d dist"            
   },
   "dependencies": {
     "react": "^18.3.1",
