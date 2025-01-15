@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import CompteRebours from '../compte-rebours/compte-rebours';
-import './Accueil.css';
+import './accueil.css';
 
 const Accueil = () => {
   const navigate = useNavigate();
