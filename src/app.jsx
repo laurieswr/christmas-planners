@@ -15,6 +15,7 @@ function App() {
         <Header />
         <Accueil/>
         <Routes>
+        <Route path="/accueil" element={<Accueil />} />
           <Route path="/cadeaux" element={<Cadeaux />} />
           <Route path="/menu" element={<MenuNoel />} />
           <Route path="/music" element={<ChristmasMusic />} />
