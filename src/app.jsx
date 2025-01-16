@@ -14,11 +14,10 @@ function App() {
     <>
       <div>
         <Header />
+        <Accueil/>
         <Routes>
-          <Route path="/accueil" element={<Accueil />} />
           <Route path="/cadeaux" element={<Cadeaux />} />
           <Route path="/menu" element={<MenuNoel />} />
-          <Route path="/compte-rebours" element={<CompteRebours />} />
           <Route path="/music" element={<ChristmasMusic />} />
         </Routes>
         <Navbar />
