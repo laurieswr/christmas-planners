@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './cadeau.css';
-import corbeilleImage from '../images/corbeille.jpg';
 
 const Cadeaux = () => {
   const [cadeau, setCadeau] = useState('');
