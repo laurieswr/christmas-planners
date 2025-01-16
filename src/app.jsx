@@ -6,7 +6,6 @@ import Footer from './footer/footer';
 import Navbar from './navbar/navbar';
 import MenuNoel from './menu/menu';
 import Header from './header/header';
-import CompteRebours from './compte-rebours/compte-rebours';
 import ChristmasMusic from './christmas-music/music';
 
 function App() {
