@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './compterebours.css'
+import './compterebours.css';
 
 const CompteRebours = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,8 +9,20 @@ const CompteRebours = () => {
     seconds: 0
   });
 
+  const calculateNextChristmas = () => {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const nextChristmas = new Date(`December 25, ${currentYear} 00:00:00`);
+
+    // Si Noël est déjà passé cette année, prendre l'année suivante
+    if (now > nextChristmas) {
+      return new Date(`December 25, ${currentYear + 1} 00:00:00`).getTime();
+    }
+    return nextChristmas.getTime();
+  };
+
   useEffect(() => {
-    const targetDate = new Date('December 25, 2024 00:00:00').getTime();
+    let targetDate = calculateNextChristmas();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -24,9 +36,8 @@ const CompteRebours = () => {
 
         setTimeLeft({ days, hours, minutes, seconds });
       } else {
-        // Le compte à rebours est terminé
-        clearInterval(countdown);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        // Redéfinir la date cible pour l'année suivante
+        targetDate = calculateNextChristmas();
       }
     };
 
@@ -38,11 +49,10 @@ const CompteRebours = () => {
   return (
     <div id="countdown">
       <div>
-        <h2 className='titre'>Compte  à rebours de Noël 🎄</h2>
+        <h2 className='titre'>Compte à rebours de Noël 🎄</h2>
         <p>{`${timeLeft.days} jours, ${timeLeft.hours} heures, ${timeLeft.minutes} minutes, ${timeLeft.seconds} secondes`}</p>
       </div>
     </div>
-    
   );
 };
 
